@@ -50,7 +50,6 @@ Content-Type: application/json
     "id": 1,
     "platillo": "Sopa de pollo",
     "precio": 20000,
-    "mesa": 2,
     "cantidad": 2,
     "observaciones": "sin cebolla y tomate",
     "cliente": "Rosa Melo",
