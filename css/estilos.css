@@ -1,0 +1,446 @@
+/* Variables de colores y fuentes */
+:root {
+  --primary-color: #e74c3c;
+  --secondary-color: #f39c12;
+  --accent-color: #e67e22;
+  --dark-color: #121212;
+  --darker-color: #0a0a0a;
+  --light-color: #ecf0f1;
+  --success-color: #2ecc71;
+  --warning-color: #f1c40f;
+  --danger-color: #c0392b;
+  --text-color: #f5f5f5;
+  --text-muted: #aaaaaa;
+  --background-color: #1a1a1a;
+  --card-bg: #222222;
+  --border-color: #333333;
+}
+
+/* Estilos generales */
+body,
+html {
+  height: 100%;
+  font-family: "Arial", "Helvetica", sans-serif;
+  color: var(--text-color);
+  background-color: var(--dark-color);
+  line-height: 1.6;
+  background-image: url("https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--darker-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-weight: 700;
+  color: var(--light-color);
+}
+
+/* Imagen de fondo para la página principal */
+.bgimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-9kTy7Kvgsc72NTNkFHfYB4NTyoF1MR.png");
+  min-height: 90%;
+  position: relative;
+}
+
+/* Navbar mejorado */
+.w3-bar {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  background-color: rgba(10, 10, 10, 0.9) !important;
+}
+
+.w3-bar.w3-black {
+  background-color: var(--darker-color) !important;
+}
+
+.w3-bar-item.w3-button {
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  margin: 5px;
+  color: var(--light-color);
+}
+
+.w3-bar-item.w3-button:hover {
+  background-color: var(--primary-color) !important;
+  transform: translateY(-2px);
+}
+
+.btn-danger {
+  background-color: var(--primary-color) !important;
+  border: none !important;
+  transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+  background-color: var(--danger-color) !important;
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background-color: var(--secondary-color) !important;
+  border: none !important;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-color) !important;
+  transform: translateY(-2px);
+}
+
+/* Contenedores principales */
+.w3-container.w3-black {
+  background-color: rgba(18, 18, 18, 0.95) !important;
+  padding-top: 100px;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.w3-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Títulos */
+.w3-jumbo {
+  color: var(--light-color);
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Tabs y menús */
+.w3-row.w3-center.w3-border {
+  border-color: var(--border-color) !important;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+}
+
+.tablink {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.tablink:hover,
+.tablink.w3-red {
+  background-color: var(--primary-color) !important;
+}
+
+/* Contenedores de menú */
+.menu {
+  background-color: var(--card-bg) !important;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Tablas */
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.table th {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  padding: 12px;
+  font-weight: 600;
+  text-align: left;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border-color);
+  vertical-align: middle;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.table tr:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Formularios */
+.form-control,
+.w3-input {
+  border: 1px solid var(--border-color) !important;
+  border-radius: 4px !important;
+  padding: 10px !important;
+  transition: all 0.3s ease;
+  background-color: var(--dark-color) !important;
+  color: var(--text-color) !important;
+}
+
+.form-control:focus,
+.w3-input:focus {
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2) !important;
+  outline: none;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+  color: var(--light-color);
+}
+
+/* Botones */
+.btn,
+.w3-button {
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover,
+.w3-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn-block,
+.w3-block {
+  width: 100%;
+  display: block;
+}
+
+.w3-button.w3-blue {
+  background-color: var(--secondary-color) !important;
+  color: var(--text-color) !important;
+}
+
+.w3-button.w3-blue:hover {
+  background-color: var(--accent-color) !important;
+}
+
+.btn-warning,
+.w3-button.w3-yellow {
+  background-color: var(--warning-color) !important;
+  color: var(--dark-color) !important;
+}
+
+.btn-success,
+.w3-button.w3-green {
+  background-color: var(--success-color) !important;
+  color: white !important;
+}
+
+/* Tarjetas */
+.card {
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border: none;
+  overflow: hidden;
+  margin-bottom: 20px;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}
+
+.card-header {
+  background-color: var(--dark-color);
+  border-bottom: 2px solid var(--primary-color);
+  padding: 15px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  color: var(--light-color);
+  margin-bottom: 20px;
+}
+
+/* Alertas */
+.alert {
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.alert-success {
+  background-color: rgba(46, 204, 113, 0.2);
+  color: var(--success-color);
+  border: 1px solid var(--success-color);
+}
+
+.alert-danger {
+  background-color: rgba(231, 76, 60, 0.2);
+  color: var(--danger-color);
+  border: 1px solid var(--danger-color);
+}
+
+/* Footer - Eliminada referencia a w3schools */
+footer {
+  background-color: rgba(10, 10, 10, 0.9) !important;
+  color: var(--light-color);
+  padding: 30px 0;
+  margin-top: 50px;
+}
+
+footer a {
+  color: var(--accent-color) !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--primary-color) !important;
+}
+
+footer p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos específicos para la página de inicio */
+.w3-display-bottomleft .w3-tag {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.w3-display-middle .w3-text-white {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.w3-display-middle .w3-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: 2px solid white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.w3-display-middle .w3-button:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Estilos para la página de menú */
+.w3-tag.w3-dark-grey {
+  background-color: var(--primary-color) !important;
+  color: white;
+  border-radius: 4px;
+}
+
+.w3-tag.w3-red {
+  background-color: var(--danger-color) !important;
+}
+
+.w3-tag.w3-grey {
+  background-color: var(--accent-color) !important;
+  color: var(--dark-color);
+}
+
+.w3-text-grey {
+  color: var(--text-muted) !important;
+}
+
+/* Estilos para la sección About */
+.w3-container.w3-red {
+  background-color: var(--primary-color) !important;
+}
+
+.w3-circle {
+  border: 3px solid white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Estilos para la sección de contacto */
+.w3-container.w3-blue-grey {
+  background-color: var(--dark-color) !important;
+}
+
+.w3-container.w3-blue-grey .w3-tag {
+  background-color: var(--accent-color);
+  color: var(--dark-color);
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.w3-button.w3-light-grey {
+  background-color: var(--secondary-color) !important;
+  color: var(--text-color) !important;
+  font-weight: 600;
+}
+
+.w3-button.w3-light-grey:hover {
+  background-color: var(--accent-color) !important;
+  color: white !important;
+}
+
+/* Estilos específicos para la página del chef */
+.btn-sm {
+  padding: 5px 10px;
+  font-size: 0.875rem;
+}
+
+/* Estilos específicos para la página del cajero */
+#ingredientesPizza,
+#ingredientesPasta,
+#IngredienteSopa {
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+/* Efectos de partículas para simular los elementos flotantes de la imagen de referencia */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .w3-jumbo {
+    font-size: 3rem !important;
+  }
+
+  .w3-container.w3-black {
+    padding-top: 80px;
+  }
+
+  .w3-display-middle .w3-text-white {
+    font-size: 3rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .w3-jumbo {
+    font-size: 2.5rem !important;
+  }
+
+  .w3-container.w3-black {
+    padding-top: 70px;
+  }
+
+  .table th,
+  .table td {
+    padding: 8px;
+  }
+}
+
