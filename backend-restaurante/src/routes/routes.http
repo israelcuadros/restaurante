@@ -51,7 +51,6 @@ Content-Type: application/json
     "platillo": "Sopa de pollo",
     "precio": 20000,
     "cantidad": 2,
-    "mesa": 1,
     "observaciones": "sin cebolla y tomate",
     "cliente": "Rosa Melo",
     "fecha": "2020-11-16T20:00",

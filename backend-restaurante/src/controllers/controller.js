@@ -262,7 +262,7 @@ controller.update_pedido = (req, res) => {
             res.send('Error al conectar a la base de datos');
             return;
         }
-        const validKeys = ['platillo', 'precio', 'cantidad', 'observaciones', 'cliente', 'fecha', 'estado'];
+        const validKeys = ['id','platillo', 'precio', 'cantidad', 'observaciones', 'cliente', 'fecha', 'estado'];
         const receivedKeys = Object.keys(req.body);
 
         // Verificar si hay claves no permitidas

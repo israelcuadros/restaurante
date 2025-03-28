@@ -95,7 +95,7 @@ if (path.includes("pedidos.html")){
 
           botonEditar.className = "btn btn-success btn-sm"
           botonEditar.textContent = "Editar"
-          botonEditar.onclick = () => editarPedido(pedido.id, pedido.platillo, pedido.precio, pedido.cantidad, pedido.mesa, pedido.observaciones, pedido.cliente, pedido.fecha, pedido.estado)
+          botonEditar.onclick = () => editarPedido(pedido.id, pedido.platillo, pedido.precio, pedido.cantidad, pedido.observaciones, pedido.cliente, pedido.fecha, pedido.estado)
 
           botonEliminar.className = "btn btn-danger btn-sm"
           botonEliminar.textContent = "Eliminar"
@@ -113,7 +113,7 @@ if (path.includes("pedidos.html")){
         }
       }
     
-      async function editarPedido(id, platillo, precio, cantidad, mesa, observaciones, cliente, fecha, estado) {
+      async function editarPedido(id, platillo, precio, cantidad, observaciones, cliente, fecha, estado) {
         try {
             // Buscar la fila del pedido en la tabla
             const fila = document.querySelector(`tr[data-id='${id}']`);
@@ -173,7 +173,8 @@ if (path.includes("pedidos.html")){
                 const nuevoPlatillo = inputPlatillo.value;
                 const nuevaCantidad = parseInt(inputCantidad.value);
                 const nuevasObservaciones = inputObservaciones.value;
-    
+                window.location.reload()
+                
                 // Enviar la actualización al servidor
                 const response = await fetch(`http://localhost:3005/pedido`, {
                     method: "PUT",
@@ -183,7 +184,6 @@ if (path.includes("pedidos.html")){
                         platillo: nuevoPlatillo,
                         precio,
                         cantidad: nuevaCantidad,
-                        mesa,
                         observaciones: nuevasObservaciones,
                         cliente,
                         fecha,
@@ -207,6 +207,7 @@ if (path.includes("pedidos.html")){
                 } else {
                     console.error("Error al actualizar el pedido:", data);
                 }
+                window.location.reload()
             };
     
             // Crear botón "Cancelar"
